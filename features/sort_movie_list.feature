@@ -26,12 +26,22 @@ Scenario: sort movies alphabetically
   	When I check the following ratings: G, PG-13, NC-17, R, PG
 	And I press "Refresh"
   	And I follow "Movie Title"
-  	Then I should see "Aladdin" before "Amelie"
+  	Then I should see all of the movies 
+  	And I should see "2001: A Space Odyssey" before "The Help"
+  	And I should see "2001: A Space Odyssey" before "Aladdin"
+  	And I should see "Chocolat" before "When Harry Met Sally"
+  	And I should see "Amelie" before "Chicken Run"
+  	And I should see "The Terminator" before "When Harry Met Sally"
 
 Scenario: sort movies in increasing order of release date
   	Given I am on the RottenPotatoes home page
   	When I check the following ratings: G, PG-13, NC-17, R, PG
 	And I press "Refresh"
   	And I follow "Release Date"
-  	Then I should see "When Harry Met Sally" before "Aladdin"
+  	Then I should see all of the movies 
+  	And I should see "1968-04-06" before "2011-08-10"
+  	And I should see "1968-04-06" before "1981-06-12"
+  	And I should see "1984-10-26" before "1989-07-21"
+  	And I should see "1992-11-25" before "2000-06-21"
+  	And I should see "2004-11-05" before "2011-08-10"
 
